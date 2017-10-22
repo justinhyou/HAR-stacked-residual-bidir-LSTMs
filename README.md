@@ -1,4 +1,4 @@
-# HAR-stacked-residual-bidir-LSTM
+# IntuitiveSurgical-Stacked-Residual-Bidirectional-LSTMs
 
 The project is based on [this repository](https://github.com/guillaume-chevalier/LSTM-Human-Activity-Recognition) which is presented as a tutorial. It consists of Human Activity Recognition (HAR) using stacked residual bidirectional-LSTM cells (RNN) with TensorFlow. 
 
@@ -27,7 +27,7 @@ We are using a deep neural network with stacked LSTM cells as well as residual (
 Our LSTM cells are also bidirectional in term of how they pass trough the time axis, but differ from classic bidirectional LSTMs by the fact we concatenate their output features rather than adding them in an element-wise fashion. A simple hidden ReLU layer then lowers the dimension of those concatenated features for sending them to the next stacked layer. Bidirectionality can be disabled easily.
 
 
-## Setup
+## Setup for HAR and Opportunity datasets
 
 We used `TensorFlow 0.11` and `Python 2`. `Sklearn` is also used.
 
@@ -58,3 +58,11 @@ We only used a subset of the full dataset as done in other research in order to 
 
 The config file can be runned like this: `config_dataset_opportunity_18_classes.py`.
 For best results, it is possible to readjust the learning rate such as in the `3x3_result_opportunity_18.txt` file.
+
+## Setup for IntuitiveSurgical dataset
+We used `TensorFlow 0.11` and `Python 2`. `Sklearn` is also used.
+
+One of the available datasets is JIGSAW, which must be individually request from this [website](https://cirl.lcsr.jhu.edu/research/hmm/datasets/jigsaws_release/). The extracted data can then be loaded by running `python prep_dataset.py` in the `data/` folder.
+
+## Results for JIGSAW dataset
+(Not yet optimized)
