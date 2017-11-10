@@ -1,5 +1,3 @@
-__author__ = 'gchevalier'
-
 import tensorflow as tf
 from sklearn import metrics
 from sklearn.utils import shuffle
